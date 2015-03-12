@@ -1,17 +1,11 @@
 #include <stdio.h>
-//#include <iostream>
 #include <algorithm>
-
 using namespace std;
-
-bool cmp(int a, int b)
-{
-    return( a>b );
-}
 
 int main()
 {
     int n;
+
     int buf[100];
     while(scanf("%d",&n)!=EOF)
     {
@@ -19,11 +13,12 @@ int main()
         {
             scanf("%d",&buf[i]);
         }
-        sort(buf,buf+n,cmp);
+        sort(buf,buf+n);
         for(int i=0; i<n; i++)
         {
-            //printf("%d ",buf[i]);
+            printf("%d",buf[i]);
         }
+        printf("\n");
     }
     return 0;
 }
